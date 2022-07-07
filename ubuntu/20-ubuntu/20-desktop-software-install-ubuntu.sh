@@ -41,7 +41,7 @@ wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
 echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
 sudo apt update -y
 sudo apt install anydesk -y
-echo hello@world | sudo anydesk --set-password
+# echo hello@world | sudo anydesk --set-password
 
 # Install Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
