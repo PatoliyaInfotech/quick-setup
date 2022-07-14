@@ -18,9 +18,6 @@ echo "${reset}"
 CURRENT_USER=$USER
 echo "$CURRENT_USER"
 
-# Enable multiverse repository
-sudo sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list
-
 # Upgrade to Latest Update
 sudo apt-get update -q -y
 sudo apt-get upgrade -q -y
@@ -38,10 +35,6 @@ sudo apt install software-properties-common apt-transport-https wget -y
 sudo pip install virtualenvwrapper
 
 # -------------------- Desktop Installation Start -------------------- #
-# Speed Monitor
-# sudo apt-add-repository ppa:fixnix/netspeed -y
-# sudo apt-get update -q -y
-# sudo apt-get install indicator-netspeed-unity -y
 
 # Install Anydesk
 wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
@@ -55,12 +48,6 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update  -y
 sudo apt-get install google-chrome-stable -y
-
-# Install snapd
-sudo apt install snapd -y
-
-# Install RocketChat
-sudo snap install rocketchat-desktop --classic
 
 # Install Slack
 sudo snap install slack --classic
@@ -99,25 +86,21 @@ sudo code --install-extension redhat.vscode-yaml --user-data-dir
 # sudo code --install-extension Shan.code-settings-sync --user-data-dir
 
 # Set Visual Code Preference
-sudo cp ../.vscode/settings.json $HOME/.config/Code/User/settings.json
-sudo cp ../.vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
+# sudo cp ../.vscode/settings.json $HOME/.config/Code/User/settings.json
+# sudo cp ../.vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
 
 # Install Smartgit
-# sudo add-apt-repository ppa:eugenesan/ppa -y
-# sudo apt-get update -y
-# sudo apt-get install smartgit -y
-wget https://www.syntevo.com/downloads/smartgit/smartgit-21_2_3.deb
-sudo dpkg -i smartgit-21_2_3.deb -y
+sudo add-apt-repository ppa:eugenesan/ppa -y
+sudo apt-get update -y
+sudo apt-get install smartgit -y
+# wget https://www.syntevo.com/downloads/smartgit/smartgit-21_2_3.deb
+# sudo dpkg -i smartgit-21_2_3.deb -y
 
 # Install Wallpaper Changer
 sudo add-apt-repository ppa:peterlevi/ppa -y
 sudo apt-get update -q -y
 sudo apt-get install variety variety-slideshow -y
 
-# Ubuntu 18 Tweaks
-sudo add-apt-repository universe -y
-sudo apt install gnome-tweak-tool -y
-sudo gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action 'cycle-windows'
 # -------------------- Desktop Installation End -------------------- #
 
 # Upgrade to Latest Update
