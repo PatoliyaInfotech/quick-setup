@@ -38,12 +38,14 @@ sudo dpkg -i mongodb-compass_1.33.0_amd64.deb
 
 #Install NodeJS
 echo "Installing NodeJS..."
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install nodejs
 
 #Install NodeJS Other packages
 echo "Installing NodeJS Other Packages..."
 sudo apt install build-essential
+npm install typescript --save-dev
+
 
 # Remove useless files from the APT cache
 sudo apt autoremove -y
