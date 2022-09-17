@@ -96,6 +96,9 @@ sudo apt-get install smartgit -y
 # wget https://www.syntevo.com/downloads/smartgit/smartgit-21_2_3.deb
 # sudo dpkg -i smartgit-21_2_3.deb -y
 
+# Install Flamshot for screenshots
+sudo apt install flameshot
+
 # Install Wallpaper Changer
 sudo add-apt-repository ppa:peterlevi/ppa -y
 sudo apt-get update -q -y
