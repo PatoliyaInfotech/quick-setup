@@ -58,7 +58,7 @@ sudo snap install skype --classic
 # Install Postman
 sudo snap install postman
 
-# Install Visiul Code
+# Install Visual Code
 sudo snap install code --classic
 
 # Install Visual Code Extension
@@ -88,13 +88,6 @@ sudo code --install-extension redhat.vscode-yaml --user-data-dir
 # Set Visual Code Preference
 # sudo cp ../.vscode/settings.json $HOME/.config/Code/User/settings.json
 # sudo cp ../.vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
-
-# Install Smartgit
-sudo add-apt-repository ppa:eugenesan/ppa -y
-sudo apt-get update -y
-sudo apt-get install smartgit -y
-# wget https://www.syntevo.com/downloads/smartgit/smartgit-21_2_3.deb
-# sudo dpkg -i smartgit-21_2_3.deb -y
 
 # Install Flamshot for screenshots
 sudo apt install flameshot
