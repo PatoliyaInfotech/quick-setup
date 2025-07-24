@@ -92,6 +92,13 @@ if ! sudo snap install mysql-workbench-community; then
     exit 1
 fi
 
+# Set MySQL root password (non-interactive)
+echo "${green}Setting MySQL root password...${reset}"
+sudo mysql -u root <<EOF
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'Root@123';
+FLUSH PRIVILEGES;
+EOF
+
 # Start and secure MySQL
 sudo systemctl start mysql
 sudo mysql_secure_installation
